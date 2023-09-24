@@ -1,2 +1,3 @@
 # Sistema_Escolar_exercicio
-exercicio sobre sistema escolar em java
+  
+exercicio sobre sistema de gerenciamento escolar em java
