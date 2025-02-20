@@ -4,15 +4,14 @@ public class Professor {
     private String departamento;
     private String email;
 
-    public static ArrayList<Diciplina> diciplinaDoProfesssor = new ArrayList<>();
+    private ArrayList<Diciplina> diciplinaDoProfesssor = new ArrayList<>();
 
-    public Professor(String nome, String departamento, String email, ArrayList<Diciplina> diciplinaDoProfesssor) {
+    public Professor(String nome, String departamento, String email) {
         this.nome = nome;
         this.departamento = departamento;
         this.email = email;
-        Professor.diciplinaDoProfesssor = diciplinaDoProfesssor;
-
     }
+    
     public String getNome() {
         return nome;
     }
@@ -34,14 +33,12 @@ public class Professor {
     public ArrayList<Diciplina> getDiciplinaDoProfesssor() {
         return diciplinaDoProfesssor;
     }
-    public void setDiciplinaDoProfesssor(ArrayList<Diciplina> diciplinaDoProfesssor) {
-        Professor.diciplinaDoProfesssor = diciplinaDoProfesssor;
-    }
     
     public void adicionarDiciplina(Diciplina diciplina){
         diciplinaDoProfesssor.add(diciplina);
     }
-    public String imprimirProfessores() {
+
+    public String imprimirProfessor() {
         return "Professor [nome=" + nome + ", departamento=" + departamento + ", email=" + email + "]";
     }
     
