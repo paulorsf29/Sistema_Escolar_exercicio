@@ -5,6 +5,7 @@ public class Aluno {
     private double nota2;
     private double nota3;
     private double nota4;
+    private double media;
     
     public Aluno(String nomeAluno, int matricula, double nota1, double nota2, double nota3, double nota4) {
         this.nomeAluno = nomeAluno;
@@ -13,6 +14,7 @@ public class Aluno {
         this.nota2 = nota2;
         this.nota3 = nota3;
         this.nota4 = nota4;
+        this.media = mediaDoAluno();
     }
 
     public String getNomeAluno() {
@@ -63,20 +65,18 @@ public class Aluno {
         this.nota4 = nota4;
     }
 
-    public double mediaDoAluno (double nota1, double nota2, double nota3, double nota4){
-        double media = (nota1+ nota2+ nota3+ nota4)/4;
-        return media;
+    public double mediaDoAluno (){
+        return (nota1 + nota2 + nota3 + nota4) / 4;
     }
     public String situacaoAluno(){
-        double compararMedia = mediaDoAluno(nota1, nota2, nota3, nota4);
-        if (compararMedia <=7) {
-            return "aluno aprovado";
+        if (media >= 7) {
+            return "Aprovado";
         } else {
-            return "aluno reprovado";
+            return "Reprovado";
         }
     }
 
-    public String imprimirAlunos() {
+    public String imprimirAluno() {
         return "Aluno [nomeAluno=" + nomeAluno + ", matricula=" + matricula + ", nota1=" + nota1 + ", nota2=" + nota2
                 + ", nota3=" + nota3 + ", nota4=" + nota4 + "]";
     }
